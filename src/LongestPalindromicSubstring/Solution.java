@@ -1,6 +1,8 @@
 package LongestPalindromicSubstring;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by lkq on 2017/3/9.
@@ -23,6 +25,7 @@ public class Solution {
 
 
     public static void main(String[] args) {
+        List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "Dave");
 
     }
 
