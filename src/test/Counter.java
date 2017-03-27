@@ -6,10 +6,10 @@ package test;
 public class Counter {
     public volatile static int count = 0;
     public static void inc(){
-        try {
+        /*try {
             Thread.sleep(1);
         }catch (InterruptedException e){
-        }
+        }*/
         count ++;
     }
 
@@ -27,3 +27,8 @@ public class Counter {
         System.out.println("运行结果:Counter.count = " + Counter.count);
     }
 }
+//对于volatile修饰的变量，jvm只是保证从主内存加载到线程工作内存的值是最新的
+//假如线程1，线程2在进行read，load操作中，发现主内存中count的值都是5，那么都会加载这个最新的值
+//在线程1堆count进行修改之后，会write到主内存中，内存中的count变量就会变成6
+//线程2由于已经进行read，load操作，在进行运算之后，也会更新主内存count的变量值为6
+//导致两个线程即使用了volatile关键字修饰之后，还是会存在并发的情况
