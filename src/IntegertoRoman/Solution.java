@@ -3,7 +3,7 @@ package IntegertoRoman;
 /**
  * Created by lkq on 2017/3/24.
  */
-public class Soulution {
+public class Solution {
     public String intToRoman(int num){
         String M[] = {"", "M", "MM", "MMM"};
         String C[] = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
@@ -13,6 +13,6 @@ public class Soulution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Soulution().intToRoman(1450));
+        System.out.println(new Solution().intToRoman(1450));
     }
 }
